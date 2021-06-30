@@ -89,11 +89,9 @@ body{
 
       @media (max-width: 320px){
         body{
-
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          margin: 0 auto;
           width: 80%;
         }
         .cardGroup{
@@ -117,10 +115,7 @@ body{
           flex-grow: 1;
           flex-basis: 1;
         }
-        .card__price{
-          
-          border: none;
-        }
+        
 
     }
     
