@@ -1,9 +1,19 @@
 html {
     font-family: "Raleway", "Helvetica", sans-serif;
-    font-weight: 400;
-    color: #2F3442;
-    height: 100%;
-    background-color: #FFFFFF;
+    color: #0234c0;
+    
+    width: 100%;
+    
+    
+}
+
+body{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-content: center;
 }
 
 .icon {color: #BCD2DA;}
@@ -13,11 +23,17 @@ html {
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    flex-direction: column;
+    align-content: center;
+
 }
 
 .card__description {
     /* display, flex-direction, justify-content, align-items */
-    padding: 15px 0;
+    padding: 5px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card__descriptionIcon {font-size: 32px; margin-bottom: 10px;}
@@ -41,17 +57,27 @@ html {
 
 .cardGroup {
     /* display */
-  
-    border: 1px solid #CAD0D2;
+    margin: 0 auto;
+    width: 710px;
+    border: 5px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    display: flex;
+    background-color: #fff;
+    height: 300px;
+    text-align: center;
+    justify-content: center;
+    
+    
   }
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
-  
+      display: flex;
+      flex-grow: 1;
       border: none;
-      border-radius: 0;
+      border-radius: 5px;
+      flex-basis: 0;
     }
   
     .cardGroup__card {
@@ -60,4 +86,48 @@ html {
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
+      display: flex;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
     }
+
+      @media (max-width: 320px){
+        body{
+
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 80%;
+        }
+        .cardGroup{
+          display: flex;
+          flex-direction: column;
+          
+        }
+        .cardGroup__card {
+          /* flex-grow, flex-shrink, flex-basis */
+          display: flex;
+          /* flex-grow: 1; */
+          border: none;
+          border-radius: 5px;
+          flex-basis: auto;
+          border-bottom: 1px solid #D7DBDD;
+          
+        }
+        .cardGroup__cardDescription {
+          /* flex-grow, flex-shrink, flex-basis */
+          display: flex;
+          flex-grow: 1;
+          flex-basis: 1;
+        }
+        .card__price{
+          
+          border: none;
+        }
+
+    }
+    
+      
+    
